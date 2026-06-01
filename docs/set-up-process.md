@@ -1,19 +1,21 @@
-# PROCESS REMAING FROM 15th step
-# Pirate Ship + Ocean Portfolio — Initial Project Setup 
+# Pirate Ship + Ocean Portfolio — Initial Project Setup
+
+## Repo Split
+
+- Frontend repo: `pirate-ocean-portfolio-frontend`
+- Backend repo: `pirate-ocean-portfolio-backend`
+- Keep UI, styling, animation, and client state in the frontend repo.
+- Keep Prisma, auth, API code, email, and database wiring in the backend repo.
 
 ---
 
-# 1. Create Project
-
-## Create Next.js Project
+# 1. Create the Frontend App
 
 ```bash
-pnpm create next-app@latest pirate-ocean-portfolio
+pnpm create next-app@latest pirate-ocean-portfolio-frontend
 ```
 
----
-
-# 2. Recommended Setup Options
+Recommended options:
 
 | Option | Value |
 |---|---|
@@ -27,252 +29,68 @@ pnpm create next-app@latest pirate-ocean-portfolio
 
 ---
 
-# 3. Move Into Project
+# 2. Frontend Install Set
+
+Install only UI-focused packages in the frontend repo:
 
 ```bash
-cd pirate-ocean-portfolio
+pnpm add clsx tailwind-merge tailwindcss-animate framer-motion gsap @studio-freight/lenis three @react-three/fiber @react-three/drei @react-three/postprocessing zustand react-hook-form zod @hookform/resolvers axios @tanstack/react-query contentlayer next-contentlayer gray-matter howler @tsparticles/react tsparticles lucide-react dayjs next-seo @vercel/analytics
 ```
 
 ---
 
-# 4. Install Core Dependencies
+# 3. Create the Backend App
 
-## UI & Styling
-
-```bash
-pnpm add clsx tailwind-merge tailwindcss-animate
-```
-
----
-
-## shadcn/ui
+Choose a backend runtime and keep it separate from the frontend repo.
 
 ```bash
-pnpm dlx shadcn@latest init
+mkdir pirate-ocean-portfolio-backend
+cd pirate-ocean-portfolio-backend
 ```
 
-### Recommended Answers
-
-| Question | Answer |
-|---|---|
-| Style | Default |
-| Base Color | Slate |
-| CSS Variables | Yes |
-| Tailwind Config | tailwind.config.ts |
-| Components Alias | @/components |
-| Utils Alias | @/lib/utils |
-
----
-
-# 5. Install Animation System
-
-```bash
-pnpm add framer-motion gsap @studio-freight/lenis
-```
-
----
-
-# 6. Install Three.js Stack
-
-```bash
-pnpm add three @react-three/fiber @react-three/drei @react-three/postprocessing
-```
-
----
-
-# 7. Install State Management
-
-```bash
-pnpm add zustand
-```
-
----
-
-# 8. Install Forms & Validation
-
-```bash
-pnpm add react-hook-form zod @hookform/resolvers
-```
-
----
-
-# 9. Install API & Data Tools
-
-```bash
-pnpm add axios @tanstack/react-query
-```
-
----
-
-# 10. Install Authentication
-
-```bash
-pnpm add next-auth
-```
-
----
-
-# 11. Install Database Stack
-
-```bash
-pnpm add prisma @prisma/client
-```
-
----
-
-# 12. Initialize Prisma
+Initialize Prisma in the backend repo:
 
 ```bash
 npx prisma init
 ```
 
----
+Backend ownership:
 
-# 13. Install Content System
-
-```bash
-pnpm add contentlayer next-contentlayer gray-matter
-```
-
----
-
-# 14. Install Audio System
-
-```bash
-pnpm add howler
-```
+- `prisma/schema.prisma`
+- `prisma.config.ts`
+- API routes or controllers
+- auth setup
+- email delivery
+- database migrations
 
 ---
 
-# 15. Install Particles System
+# 4. Environment Files
 
-```bash
-pnpm add @tsparticles/react tsparticles
+Frontend:
+
+```txt
+.env.local
+.env.example
 ```
 
----
-
-# 16. Install Icons
-
-```bash
-pnpm add lucide-react
-```
-
----
-
-# 17. Install Utility Packages
-
-```bash
-pnpm add dayjs
-```
-
----
-
-# 18. Install SEO Packages
-
-```bash
-pnpm add next-seo
-```
-
----
-
-# 19. Install Monitoring & Analytics
-
-```bash
-pnpm add @vercel/analytics
-```
-
----
-
-# 20. Install Email System
-
-```bash
-pnpm add resend
-```
-
----
-
-# 21. Install Testing Stack
-
-```bash
-pnpm add -D vitest @testing-library/react @testing-library/jest-dom jsdom
-```
-
----
-
-# 22. Install Playwright
-
-```bash
-pnpm add -D @playwright/test
-```
-
-Initialize:
-
-```bash
-npx playwright install
-```
-
----
-
-# 23. Install Code Quality Tools
-
-```bash
-pnpm add -D prettier eslint-config-prettier husky lint-staged commitlint @commitlint/config-conventional
-```
-
----
-
-# 24. Initialize Husky
-
-```bash
-npx husky init
-```
-
----
-
-# 25. Create Environment Files
-
-## Create
+Backend:
 
 ```txt
 .env
-.env.local
 .env.example
 ```
 
 ---
 
-# 26. Configure Path Aliases
-
-## tsconfig.json
-
-```json
-{
-  "compilerOptions": {
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}
-```
-
----
-
-# 27. Recommended Root Folder Structure
+# 5. Recommended Frontend Folder Structure
 
 ```txt
-pirate-ocean-portfolio/
-│
+pirate-ocean-portfolio-frontend/
 ├── public/
-│
 ├── docs/
-│
-├── prisma/
-│
 ├── src/
-│   │
 │   ├── app/
-│   │
 │   ├── components/
 │   │   ├── ui/
 │   │   ├── common/
@@ -281,58 +99,19 @@ pirate-ocean-portfolio/
 │   │   ├── animations/
 │   │   ├── 3d/
 │   │   └── effects/
-│   │
 │   ├── features/
-│   │   ├── landing/
-│   │   ├── about/
-│   │   ├── skills/
-│   │   ├── projects/
-│   │   ├── timeline/
-│   │   ├── contact/
-│   │   ├── achievements/
-│   │   └── assistant/
-│   │
 │   ├── lib/
-│   │   ├── utils/
-│   │   ├── constants/
-│   │   ├── hooks/
-│   │   ├── animations/
-│   │   ├── audio/
-│   │   ├── validations/
-│   │   ├── api/
-│   │   └── seo/
-│   │
 │   ├── services/
-│   │
 │   ├── store/
-│   │
 │   ├── styles/
-│   │
 │   ├── providers/
-│   │
 │   ├── config/
-│   │
 │   ├── content/
-│   │
 │   ├── assets/
-│   │   ├── images/
-│   │   ├── icons/
-│   │   ├── audio/
-│   │   ├── shaders/
-│   │   ├── models/
-│   │   └── fonts/
-│   │
 │   ├── types/
-│   │
 │   └── middleware/
-│
 ├── tests/
-│   ├── e2e/
-│   ├── integration/
-│   └── unit/
-│
 ├── .husky/
-│
 ├── package.json
 ├── tailwind.config.ts
 ├── tsconfig.json
@@ -342,20 +121,16 @@ pirate-ocean-portfolio/
 
 ---
 
-# 28. Recommended App Router Structure
+# 6. Recommended Frontend App Router Structure
 
 ```txt
 src/app/
-│
 ├── (marketing)/
 │   ├── page.tsx
 │   ├── about/
 │   ├── projects/
 │   ├── contact/
 │   └── layout.tsx
-│
-├── api/
-│
 ├── globals.css
 ├── layout.tsx
 ├── loading.tsx
@@ -365,73 +140,7 @@ src/app/
 
 ---
 
-# 29. Create Design System Foundation
-
-## Create
-
-```txt
-src/styles/
-│
-├── globals.css
-├── theme.css
-├── animations.css
-├── typography.css
-└── variables.css
-```
-
----
-
-# 30. Create Global Theme Tokens
-
-## Add
-
-- Ocean Colors
-- Fog Colors
-- Gold Accent Colors
-- Shadow Tokens
-- Animation Durations
-- Glow Effects
-- Typography Scale
-- Border Radius Systempnpm add next-auth
-- Z-Index Layers
-
----
-
-# 31. Setup Git Repository
-
-```bash
-git init
-```
-
----
-
-# 32. Create Initial Git Branches
-
-```bash
-main
-develop
-feature/*
-```
-
----
-
-# 33. Create Initial Documentation
-
-```txt
-docs/
-│
-├── 00-project-vision.md
-├── 01-design-system.md
-├── 02-folder-structure.md
-├── 03-animation-system.md
-├── 04-component-guidelines.md
-├── 05-performance-rules.md
-└── 06-roadmap.md
-```
-
----
-
-# 34. Recommended Development Order
+# 7. Recommended Development Order
 
 ## Phase 1
 
@@ -440,15 +149,11 @@ docs/
 - Configure layout system
 - Setup reusable UI components
 
----
-
 ## Phase 2
 
 - Build landing page
 - Build ocean environment
 - Build navigation system
-
----
 
 ## Phase 3
 
@@ -456,15 +161,11 @@ docs/
 - Add cinematic transitions
 - Add interaction systems
 
----
-
 ## Phase 4
 
 - Build feature sections
 - Build AI assistant
 - Build project showcases
-
----
 
 ## Phase 5
 
@@ -474,34 +175,7 @@ docs/
 
 ---
 
-# 35. Recommended Initial Features
-
-## First Features To Build
-
-- Navbar
-- Hero Section
-- Ocean Background
-- Ship Animation
-- Scroll System
-- Theme Tokens
-- Audio Toggle
-- Responsive Layout
-
----
-
-# 36. Recommended Deployment Stack
-
-| Service | Usage |
-|---|---|
-| Vercel | Frontend hosting |
-| Neon | PostgreSQL hosting |
-| Cloudinary | Media storage |
-| Resend | Email service |
-| Cloudflare | CDN & DNS |
-
----
-
-# 37. Final Goal
+# 8. Final Goal
 
 Build:
 - cinematic experience

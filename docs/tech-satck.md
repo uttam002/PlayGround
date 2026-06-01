@@ -1,4 +1,8 @@
-# Pirate Ship on Ocean Portfolio — Complete Tech Stack
+# Pirate Ship on Ocean Portfolio — Split Tech Stack
+
+This project is split into two repos:
+- `pirate-ocean-portfolio-frontend` for UI, styling, and client-side app logic.
+- `pirate-ocean-portfolio-backend` for API, auth, database, and delivery services.
 
 ---
 
@@ -116,13 +120,13 @@
 
 ---
 
-# Backend Framework
+# Backend Repo
 
 | Technology | Purpose |
 |---|---|
 | Node.js | Backend runtime |
-| Next.js API Routes | Backend API endpoints |
-| Next.js Server Actions | Server-side actions |
+| API routes / controllers | Backend endpoints |
+| Server-side validation | Request and payload validation |
 
 ---
 
