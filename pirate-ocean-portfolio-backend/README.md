@@ -1,10 +1,24 @@
 # Pirate Ocean Portfolio Backend
 
-This folder owns backend concerns for the project:
+This repo owns backend concerns for the project:
 
-- Prisma schema and migrations
+- API endpoints and controllers
 - auth and session logic
-- API routes or controllers
-- email delivery and other server-side services
+- Prisma schema and migrations
+- server-side services like email
+- reference backend standards in `docs/backend-standards.md`
 
-The frontend repo should consume this backend through HTTP or shared contracts, but not keep database tooling in the UI project.
+## Local development
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Copy `.env.example` to `.env` and set `DATABASE_URL` before running Prisma commands.
+
+## Demo endpoints
+
+- `GET /health`
+- `GET /api/demo-voyage/entries`
+- `POST /api/demo-voyage/entries`
