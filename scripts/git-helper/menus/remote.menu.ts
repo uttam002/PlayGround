@@ -1,14 +1,28 @@
-import inquirer from "inquirer";
-import { addRemote, showRemotes } from "../commands/remote.commands";
+import { BACK, showMenu } from "../utils/menu.utils";
+import * as remote from "../commands/remote.commands";
 
-export async function remoteMenu() {
-  const { choice } = await inquirer.prompt({
-    type: "list",
-    name: "choice",
-    message: "Remote Management",
-    choices: ["Show Remotes", "Add Remote", "Back"]
-  });
+export async function remoteMenu(): Promise<void> {
+  const choice = await showMenu("Remote Management", [
+    "Show Remotes",
+    "Add Remote",
+    "Remove Remote",
+    "Update Remote",
+    "Verify Remote",
+    "Repository Not Found Fix",
+    "Change Repository",
+    BACK,
+  ]);
 
-  if (choice === "Show Remotes") await showRemotes();
-  if (choice === "Add Remote") await addRemote();
+  const handlers: Record<string, () => Promise<void>> = {
+    "Show Remotes": remote.showRemotes,
+    "Add Remote": remote.addRemote,
+    "Remove Remote": remote.removeRemote,
+    "Update Remote": remote.updateRemoteUrl,
+    "Verify Remote": remote.verifyRemote,
+    "Repository Not Found Fix": remote.repositoryNotFoundFix,
+    "Change Repository": remote.changeRepository,
+  };
+
+  const handler = handlers[choice];
+  if (handler) await handler();
 }

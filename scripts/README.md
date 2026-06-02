@@ -1,10 +1,31 @@
-# Git Helper Scaffold
+# Git Command Assistant
 
-Install:
+Interactive Git assistant with menus, safety confirmations, learning mode, recovery workflows, GitHub CLI integration, and repository doctor.
 
-npm i inquirer execa
-npm i -D tsx typescript
+## Run
 
-package.json:
+```bash
+npm run git-helper
+```
 
-"git-helper":"tsx scripts/git-helper/index.ts"
+## CLI extensions (AI-ready)
+
+```bash
+npm run git-helper -- doctor
+npm run git-helper -- learn git.rebase
+npm run git-helper -- explain "error: pathspec did not match"
+npm run git-helper -- fix
+```
+
+## Structure
+
+```text
+scripts/git-helper/
+├── index.ts
+├── config/
+├── constants/
+├── menus/
+├── commands/
+├── services/
+└── utils/
+```
