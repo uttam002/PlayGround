@@ -14,6 +14,16 @@
     "lint:frontend": "pnpm --dir pirate-ocean-portfolio-frontend lint",
     "typecheck:backend": "pnpm --dir pirate-ocean-portfolio-backend typecheck",
     "demo:api": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/demo-api.ps1",
-    "commands": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/show-commands.ps1"
+    "commands": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/show-commands.ps1",
+    "git-helper": "tsx scripts/git-helper/index.ts"
+  },
+  "dependencies": {
+    "execa": "^8.0.1",
+    "inquirer": "^9.3.8"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
   }
 }
