@@ -1,0 +1,19 @@
+{
+  "name": "pirate-ocean-portfolio-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Root command profile for the Pirate Ocean Portfolio frontend and backend repos.",
+  "scripts": {
+    "start-application": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/start-application.ps1",
+    "dev": "npm run start-application",
+    "dev:frontend": "pnpm --dir pirate-ocean-portfolio-frontend dev",
+    "dev:backend": "pnpm --dir pirate-ocean-portfolio-backend dev",
+    "install:all": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/install-all.ps1",
+    "check": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/check-all.ps1",
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/build-all.ps1",
+    "lint:frontend": "pnpm --dir pirate-ocean-portfolio-frontend lint",
+    "typecheck:backend": "pnpm --dir pirate-ocean-portfolio-backend typecheck",
+    "demo:api": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/demo-api.ps1",
+    "commands": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/show-commands.ps1"
+  }
+}
