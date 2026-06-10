@@ -6,6 +6,7 @@
   "scripts": {
     "start-application": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/start-application.ps1",
     "dev": "npm run start-application",
+    "kill-dev": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/kill-dev.ps1",
     "dev:frontend": "pnpm --dir pirate-ocean-portfolio-frontend dev",
     "dev:backend": "pnpm --dir pirate-ocean-portfolio-backend dev",
     "install:all": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/install-all.ps1",

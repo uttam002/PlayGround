@@ -1,33 +1,46 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Cinzel, Inter } from 'next/font/google';
+import './globals.css';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Display font — used for headings, logo, island names
+const cinzel = Cinzel({
+  subsets: ['latin'],
+  variable: '--font-cinzel',
+  weight: ['400', '600', '700'],
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Body font — used for all UI text, labels, descriptions
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  weight: ['300', '400', '500', '600'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: "Pirate Ocean Portfolio",
-  description: "Interactive portfolio voyage demo",
+  title: "The Developer's Voyage",
+  description:
+    'An immersive 3D portfolio experience. Navigate a pirate world to discover projects, skills, and career journey.',
+  keywords: ['portfolio', '3D', 'developer', 'Three.js', 'interactive', 'pirate'],
+  openGraph: {
+    title: "The Developer's Voyage",
+    description: 'An immersive 3D portfolio experience.',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${cinzel.variable} ${inter.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
