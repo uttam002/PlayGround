@@ -48,9 +48,9 @@
     {
       "id": "TARGET-006",
       "name": "Navigation Routes & Island Selection",
-      "status": "Todo",
+      "status": "Completed",
       "priority": "High",
-      "branch": "feature/navigation-routes-island-selection.md",
+      "branch": "feature/navigation-routes-island-selection",
       "lastUpdated": "2026-06-14",
       "fileName": "TARGET-006-navigation-routes-island-selection.md"
     },

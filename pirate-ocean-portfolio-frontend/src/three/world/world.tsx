@@ -3,6 +3,7 @@ import { Ocean } from '@/three/objects/ocean';
 import { WorldCamera } from '@/three/cameras';
 import { Ship } from '@/three/objects/ship';
 import { WorldIslands } from './world-islands';
+import { NavigationRoutes } from '@/three/objects/navigation-routes';
 
 export function World() {
   return (
@@ -22,7 +23,8 @@ export function World() {
       {/* All data-driven islands */}
       <WorldIslands />
 
-      {/* Future: <NavigationRoutes /> */}
+      {/* Dashed navigation routes between ship hub and islands */}
+      <NavigationRoutes />
     </>
   );
 }

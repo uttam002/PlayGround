@@ -1,7 +1,14 @@
 // island-base.tsx
-import { ISLAND_GEOMETRY } from '@/constants/island.constants';
+import { ISLAND_GEOMETRY, ISLAND_INTERACTION } from '@/constants/island.constants';
 
-export function IslandBase() {
+type IslandBaseProps = {
+  isHovered?: boolean;
+};
+
+export function IslandBase({ isHovered = false }: IslandBaseProps) {
+  // Apply visual hover boost by adjusting emissive intensity
+  const emissiveIntensity = isHovered ? ISLAND_INTERACTION.HOVER_EMISSIVE_BOOST : 0;
+
   return (
     <group>
       {/* Sandy top */}
@@ -14,7 +21,13 @@ export function IslandBase() {
             ISLAND_GEOMETRY.BASE_SEGMENTS,
           ]}
         />
-        <meshStandardMaterial color={ISLAND_GEOMETRY.SAND_COLOR} roughness={0.9} metalness={0.0} />
+        <meshStandardMaterial
+          color={ISLAND_GEOMETRY.SAND_COLOR}
+          roughness={0.9}
+          metalness={0.0}
+          emissive="#ffffff"
+          emissiveIntensity={emissiveIntensity}
+        />
       </mesh>
 
       {/* Submerged rock base */}
@@ -27,7 +40,13 @@ export function IslandBase() {
             ISLAND_GEOMETRY.BASE_SEGMENTS,
           ]}
         />
-        <meshStandardMaterial color={ISLAND_GEOMETRY.ROCK_COLOR} roughness={1.0} metalness={0.0} />
+        <meshStandardMaterial
+          color={ISLAND_GEOMETRY.ROCK_COLOR}
+          roughness={1.0}
+          metalness={0.0}
+          emissive="#ffffff"
+          emissiveIntensity={emissiveIntensity}
+        />
       </mesh>
     </group>
   );

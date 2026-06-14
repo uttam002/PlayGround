@@ -8,6 +8,7 @@
 
 import { create } from 'zustand';
 import type { NavigationState, NavigationRoute } from '@/types/navigation.types';
+import { ISLAND_DEFINITIONS } from '@/constants/island.constants';
 
 type NavigationStore = NavigationState & {
   // ─── Actions ───
@@ -16,11 +17,22 @@ type NavigationStore = NavigationState & {
   clearSelection: () => void;
 };
 
+// Build initial routes from island definitions — all routes from ship hub
+function buildInitialRoutes(): NavigationRoute[] {
+  return ISLAND_DEFINITIONS.map((island) => ({
+    id: `route-ship-hub-to-${island.id}`,
+    fromId: 'ship-hub',
+    toId: island.id,
+    isActive: false,
+    isHighlighted: false,
+  }));
+}
+
 export const useNavigationStore = create<NavigationStore>((set) => ({
   // ─── State ───
   selectedIslandId: null,
   hoveredIslandId: null,
-  routes: [],
+  routes: buildInitialRoutes(),
 
   // ─── Actions ───
   selectIsland: (islandId) =>
