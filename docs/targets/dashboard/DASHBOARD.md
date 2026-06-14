@@ -9,14 +9,14 @@ This dashboard tracks the status of all development targets in **The Developer's
 
 ## 🎯 Current Target Objective
 > [!IMPORTANT]
-> We are currently focusing on **TARGET-005: Ship & Island Prototypes** (`feature/ship-island-prototypes`).
-> Click here to view requirements: [TARGET-005 Requirements](../phase-1/TARGET-005-ship-and-island-prototypes.md)
+> We are currently focusing on **TARGET-006: Navigation Routes & Island Selection** (`feature/navigation-routes-island-selection.md`).
+> Click here to view requirements: [TARGET-006 Requirements](../phase-1/TARGET-006-navigation-routes-island-selection.md)
 
 ---
 
 ## 📊 Phase 1 Progress
 
-`[███████████░░░░░░░░░]` `4 / 7 Targets Completed (57%)`
+`[██████████████░░░░░░]` `5 / 7 Targets Completed (71%)`
 
 | Target ID | Task Name | Status | Priority | Active Branch | Last Updated |
 | :---: | :--- | :---: | :---: | :---: | :---: |
@@ -24,7 +24,7 @@ This dashboard tracks the status of all development targets in **The Developer's
 | [**TARGET-002**](../phase-1/TARGET-002-threejs-canvas-scene-foundation.md) | Three.js Canvas & Scene Foundation | 🟢 Completed | 🔴 Critical | `feature/threejs-canvas-scene-foundation` | *2026-06-14* |
 | [**TARGET-003**](../phase-1/TARGET-003-ocean-prototype.md) | Ocean Prototype | 🟢 Completed | 🔴 Critical | `feature/ocean-prototype` | *2026-06-14* |
 | [**TARGET-004**](../phase-1/TARGET-004-camera-system.md) | Camera System | 🟢 Completed | 🔴 Critical | `feature/camera-system` | *2026-06-14* |
-| [**TARGET-005**](../phase-1/TARGET-005-ship-and-island-prototypes.md) | Ship & Island Prototypes | ⚪ Todo | 🟠 High | `feature/ship-island-prototypes` | *2026-06-14* |
+| [**TARGET-005**](../phase-1/TARGET-005-ship-and-island-prototypes.md) | Ship & Island Prototypes | 🟢 Completed | 🟠 High | `feature/ship-island-prototypes` | *2026-06-14* |
 | [**TARGET-006**](../phase-1/TARGET-006-navigation-routes-island-selection.md) | Navigation Routes & Island Selection | ⚪ Todo | 🟠 High | `feature/navigation-routes-island-selection.md` | *2026-06-14* |
 | [**TARGET-007**](../phase-1/TARGET-007-ui-overlay-foundation.md) | UI Overlay Foundation | ⚪ Todo | 🟠 High | `feature/ui-overlay-foundation` | *2026-06-14* |
 

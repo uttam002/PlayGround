@@ -1,6 +1,8 @@
 import { WorldEnvironment } from '@/three/environment/world-environment';
 import { Ocean } from '@/three/objects/ocean';
 import { WorldCamera } from '@/three/cameras';
+import { Ship } from '@/three/objects/ship';
+import { WorldIslands } from './world-islands';
 
 export function World() {
   return (
@@ -14,8 +16,12 @@ export function World() {
       {/* Ocean plane with wave animations */}
       <Ocean />
 
-      {/* Future: <WorldShip /> */}
-      {/* Future: <WorldIslands /> */}
+      {/* Ship floating at (0, 0, 0) */}
+      <Ship />
+
+      {/* All data-driven islands */}
+      <WorldIslands />
+
       {/* Future: <NavigationRoutes /> */}
     </>
   );

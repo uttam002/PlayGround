@@ -39,7 +39,7 @@
     {
       "id": "TARGET-005",
       "name": "Ship & Island Prototypes",
-      "status": "Todo",
+      "status": "Completed",
       "priority": "High",
       "branch": "feature/ship-island-prototypes",
       "lastUpdated": "2026-06-14",
