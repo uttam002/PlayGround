@@ -30,7 +30,7 @@
     {
       "id": "TARGET-004",
       "name": "Camera System",
-      "status": "Todo",
+      "status": "Completed",
       "priority": "Critical",
       "branch": "feature/camera-system",
       "lastUpdated": "2026-06-14",

@@ -32,6 +32,8 @@ function WorldLoadingFallback() {
   );
 }
 
+import { CameraDebugPanel } from '@/features/camera';
+
 export function WorldScene() {
   const setWorldLoaded = useWorldStore((s) => s.setWorldLoaded);
 
@@ -39,5 +41,10 @@ export function WorldScene() {
     setWorldLoaded(true);
   }, [setWorldLoaded]);
 
-  return <WorldCanvas />;
+  return (
+    <>
+      <WorldCanvas />
+      <CameraDebugPanel />
+    </>
+  );
 }
