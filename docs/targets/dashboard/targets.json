@@ -57,7 +57,7 @@
     {
       "id": "TARGET-007",
       "name": "UI Overlay Foundation",
-      "status": "Todo",
+      "status": "Completed",
       "priority": "High",
       "branch": "feature/ui-overlay-foundation",
       "lastUpdated": "2026-06-14",

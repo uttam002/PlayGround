@@ -1,0 +1,113 @@
+/* src/styles/variables.css */
+/* Core design token system — ALL color/spacing/type references come from here */
+
+:root {
+  /* ────────────────────────────────────────
+     Ocean Color Palette
+  ──────────────────────────────────────── */
+  --ocean-depth:       #050510;    /* Deepest background */
+  --ocean-dark:        #0a0a1a;    /* Dark scene bg */
+  --ocean-mid:         #0a1628;    /* Ocean surface base */
+  --ocean-primary:     #1a3a5c;    /* Primary ocean tone */
+  --ocean-accent:      #4a7fa8;    /* Navigation lines */
+  --ocean-highlight:   #7ecfff;    /* Hover state */
+  --ocean-foam:        #b8d4e8;    /* Light ocean foam */
+
+  /* ────────────────────────────────────────
+     Moonlight & Atmosphere
+  ──────────────────────────────────────── */
+  --moon-glow:         #c8d8e8;    /* Moonlight color */
+  --fog-color:         #0d1b2a;    /* Fog atmosphere */
+  --star-color:        #e8f0ff;    /* Stars/sparkles */
+
+  /* ────────────────────────────────────────
+     Gold & Treasure
+  ──────────────────────────────────────── */
+  --gold-primary:      #d4a017;    /* Primary gold */
+  --gold-bright:       #ffcc44;    /* Active/selected gold */
+  --gold-muted:        #9a7a20;    /* Muted gold */
+  --gold-dark:         #4a3a10;    /* Dark gold shadow */
+
+  /* ────────────────────────────────────────
+     Parchment & Wood
+  ──────────────────────────────────────── */
+  --parchment-light:   #f0e8d0;    /* Light parchment */
+  --parchment:         #d4c9a8;    /* Base parchment */
+  --parchment-dark:    #a89870;    /* Dark parchment */
+  --wood-light:        #8b5e3c;    /* Light wood */
+  --wood-dark:         #3d2b1f;    /* Dark wood */
+
+  /* ────────────────────────────────────────
+     Text
+  ──────────────────────────────────────── */
+  --text-primary:      #e8e0d0;    /* Main text */
+  --text-secondary:    #a8a090;    /* Secondary text */
+  --text-muted:        #6a6560;    /* Muted text */
+  --text-accent:       #c8d8e8;    /* Moon-toned accent text */
+  --text-gold:         #d4a017;    /* Gold text */
+  --text-on-dark:      #f0e8d0;    /* Text on dark backgrounds */
+
+  /* ────────────────────────────────────────
+     UI Surfaces (Glass / Panel)
+  ──────────────────────────────────────── */
+  --surface-dark:      rgba(5, 8, 18, 0.85);
+  --surface-mid:       rgba(10, 20, 40, 0.75);
+  --surface-glass:     rgba(20, 35, 60, 0.60);
+  --surface-border:    rgba(100, 150, 200, 0.15);
+  --surface-hover:     rgba(30, 55, 90, 0.80);
+
+  /* ────────────────────────────────────────
+     Spacing Scale
+  ──────────────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ────────────────────────────────────────
+     Border Radius
+  ──────────────────────────────────────── */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-full: 9999px;
+
+  /* ────────────────────────────────────────
+     Typography
+  ──────────────────────────────────────── */
+  --font-display:  var(--font-cinzel), 'Cinzel', serif;
+  --font-body:     var(--font-inter), 'Inter', sans-serif;
+
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+
+  /* ────────────────────────────────────────
+     Z-Index Layers
+  ──────────────────────────────────────── */
+  --z-canvas:   0;
+  --z-overlay:  10;
+  --z-panel:    20;
+  --z-modal:    30;
+  --z-toast:    40;
+  --z-debug:    100;
+
+  /* ────────────────────────────────────────
+     Transitions
+  ──────────────────────────────────────── */
+  --transition-fast:    150ms ease;
+  --transition-normal:  300ms ease;
+  --transition-slow:    500ms ease;
+}
