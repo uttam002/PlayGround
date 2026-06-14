@@ -1,16 +1,16 @@
-# TICKET-002 — Three.js Canvas & Scene Foundation
+# TARGET-002 — Three.js Canvas & Scene Foundation
 
-## Ticket Metadata
+## Target Metadata
 
 | Field        | Value                                              |
 |--------------|----------------------------------------------------|
-| **ID**       | TICKET-002                                         |
+| **ID**       | TARGET-002                                         |
 | **Phase**    | Phase 1 — World Foundation                         |
 | **Priority** | 🔴 Critical                                        |
 | **Type**     | 3D / Infrastructure                                |
 | **Estimated Effort** | 2–3 days                                 |
-| **Depends On** | TICKET-001 (folder structure must exist first) |
-| **Blocks**   | TICKET-003, TICKET-004, TICKET-005                 |
+| **Depends On** | TARGET-001 (folder structure must exist first) |
+| **Blocks**   | TARGET-003, TARGET-004, TARGET-005                 |
 | **Branch**   | `feature/threejs-canvas-scene-foundation`          |
 
 ---
@@ -19,7 +19,7 @@
 
 Build the working Three.js canvas, mount it into the Next.js app, set up the scene structure, configure global lighting, and establish the environment atmosphere.
 
-At the end of this ticket, visiting the app should show **a dark, atmospheric, cinematic scene** — no ocean, no ship yet — but with correct lighting, fog, and sky.
+At the end of this Target, visiting the app should show **a dark, atmospheric, cinematic scene** — no ocean, no ship yet — but with correct lighting, fog, and sky.
 
 The scene must perform at **60 FPS desktop / 30+ FPS mobile**.
 
@@ -29,7 +29,7 @@ The scene must perform at **60 FPS desktop / 30+ FPS mobile**.
 
 The world rendering system lives in `src/three/`. React Three Fiber is used as the React renderer for Three.js. The canvas must be mounted as a client component wrapped in a dynamic import so Next.js SSR does not attempt to render WebGL.
 
-**Stack used in this ticket:**
+**Stack used in this Target:**
 - `three` — 3D engine
 - `@react-three/fiber` — React renderer
 - `@react-three/drei` — helpers (Sky, Environment, Stats, etc.)

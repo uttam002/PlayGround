@@ -1,16 +1,16 @@
-# TICKET-003 — Ocean Prototype
+# TARGET-003 — Ocean Prototype
 
-## Ticket Metadata
+## Target Metadata
 
 | Field        | Value                                              |
 |--------------|----------------------------------------------------|
-| **ID**       | TICKET-003                                         |
+| **ID**       | TARGET-003                                         |
 | **Phase**    | Phase 1 — World Foundation                         |
 | **Priority** | 🔴 Critical                                        |
 | **Type**     | 3D / Visual                                        |
 | **Estimated Effort** | 2–3 days                                 |
-| **Depends On** | TICKET-001, TICKET-002                         |
-| **Blocks**   | TICKET-004 (Ship needs ocean to sit on)            |
+| **Depends On** | TARGET-001, TARGET-002                         |
+| **Blocks**   | TARGET-004 (Ship needs ocean to sit on)            |
 | **Branch**   | `feature/ocean-prototype`                          |
 
 ---
@@ -19,7 +19,7 @@
 
 Build the animated ocean prototype — the visual world foundation. The ocean must look atmospheric (dark, moonlit water), animate with gentle waves, and perform efficiently.
 
-**Version 1 scope (this ticket):**
+**Version 1 scope (this Target):**
 - ✅ Ocean surface with wave animation
 - ✅ Moonlight reflection on water
 - ✅ Animated via `useFrame` (not shaders)

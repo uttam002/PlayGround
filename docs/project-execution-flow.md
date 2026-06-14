@@ -102,10 +102,10 @@ The browser processes this CSS and applies it to the document.
 
 ### Step 6 — User sees the page
 
-**Right now (Phase 1 TICKET-001 complete):**  
+**Right now (Phase 1 TARGET-001 complete):**  
 A dark navy-black screen with "Setting sail..." centered in Cinzel font.
 
-**After TICKET-002 (next step):**  
+**After TARGET-002 (next step):**  
 The Three.js canvas mounts here — user sees the cinematic 3D world.
 
 ---
@@ -152,8 +152,8 @@ pirate-ocean-portfolio-frontend/
     │   └── camera.store.ts     ← useCameraStore: mode, isTransitioning, focusTargetId
     │
     ├── hooks/                  ← Reusable React hooks. Behavior, not UI.
-    │   ├── use-camera.ts       ← (TICKET-004) useCamera(): enterExploration, enterCinematic
-    │   └── use-navigation.ts   ← (TICKET-006) useNavigation(): navigateToIsland, hoverIsland
+    │   ├── use-camera.ts       ← (TARGET-004) useCamera(): enterExploration, enterCinematic
+    │   └── use-navigation.ts   ← (TARGET-006) useNavigation(): navigateToIsland, hoverIsland
     │
     ├── services/               ← External communication only. HTTP, email, analytics.
     │   └── (empty — Phase 2+)
@@ -374,19 +374,19 @@ While developing, `<Stats />` from `@react-three/drei` shows:
 This panel only shows in development (`AppConfig.isDevelopment = true`).
 
 **Draw call budget:**
-- Empty scene (TICKET-002): < 5 draw calls
-- With ocean (TICKET-003): ~6 draw calls
-- With ship + islands (TICKET-005): < 50 draw calls
+- Empty scene (TARGET-002): < 5 draw calls
+- With ocean (TARGET-003): ~6 draw calls
+- With ship + islands (TARGET-005): < 50 draw calls
 - Full Phase 1 scene: < 80 draw calls
 
 ---
 
 ## Git Workflow
 
-Each ticket = one feature branch:
+Each Target = one feature branch:
 
 ```bash
-git checkout -b feature/folder-architecture-setup   # TICKET-001
+git checkout -b feature/folder-architecture-setup   # TARGET-001
 # ... do work ...
 git add .
 git commit -m "feat(foundation): setup complete folder architecture and constants"

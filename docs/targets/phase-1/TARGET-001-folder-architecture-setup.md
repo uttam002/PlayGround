@@ -1,16 +1,16 @@
-# TICKET-001 — Folder Architecture & Project Foundation Setup
+# TARGET-001 — Folder Architecture & Project Foundation Setup
 
-## Ticket Metadata
+## Target Metadata
 
 | Field        | Value                                      |
 |--------------|--------------------------------------------|
-| **ID**       | TICKET-001                                 |
+| **ID**       | TARGET-001                                 |
 | **Phase**    | Phase 1 — World Foundation                 |
 | **Priority** | 🔴 Critical — Must be done first           |
 | **Type**     | Infrastructure / Foundation                |
 | **Estimated Effort** | 1–2 days                         |
-| **Depends On** | Nothing — This is the root ticket        |
-| **Blocks**   | All other Phase 1 tickets                  |
+| **Depends On** | Nothing — This is the root Target        |
+| **Blocks**   | All other Phase 1 Targets                  |
 | **Branch**   | `feature/folder-architecture-setup`        |
 
 ---
@@ -21,7 +21,7 @@ Establish the complete, permanent folder architecture for the frontend applicati
 
 Every folder must be created with the correct name, correct placement, and a placeholder `index.ts` or `.gitkeep` file so the structure is committed to Git and visible to all developers.
 
-This ticket is the **foundation of all subsequent work**. No other ticket may begin implementation until this structure exists.
+This Target is the **foundation of all subsequent work**. No other Target may begin implementation until this structure exists.
 
 ---
 
@@ -503,7 +503,7 @@ export default function RootLayout({
 #### `src/app/(portfolio)/page.tsx` — Route Placeholder
 
 ```typescript
-// This is a placeholder until the Three.js world is mounted in TICKET-003
+// This is a placeholder until the Three.js world is mounted in TARGET-003
 export default function PortfolioPage() {
   return (
     <main>

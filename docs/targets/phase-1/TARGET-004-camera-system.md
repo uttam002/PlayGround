@@ -1,16 +1,16 @@
-# TICKET-004 — Camera System
+# TARGET-004 — Camera System
 
-## Ticket Metadata
+## Target Metadata
 
 | Field        | Value                                              |
 |--------------|----------------------------------------------------|
-| **ID**       | TICKET-004                                         |
+| **ID**       | TARGET-004                                         |
 | **Phase**    | Phase 1 — World Foundation                         |
 | **Priority** | 🔴 Critical                                        |
 | **Type**     | 3D / System                                        |
 | **Estimated Effort** | 2–3 days                                 |
-| **Depends On** | TICKET-001, TICKET-002                         |
-| **Blocks**   | TICKET-005 (Ship prototype needs camera modes), TICKET-006 (Navigation needs camera transitions) |
+| **Depends On** | TARGET-001, TARGET-002                         |
+| **Blocks**   | TARGET-005 (Ship prototype needs camera modes), TARGET-006 (Navigation needs camera transitions) |
 | **Branch**   | `feature/camera-system`                            |
 
 ---
@@ -19,7 +19,7 @@
 
 Build the programmatic camera control system for the 3D world. This system defines how the camera behaves in all four modes: Cinematic, Exploration, Focus, and Return.
 
-**Version 1 scope (this ticket):**
+**Version 1 scope (this Target):**
 - ✅ Camera mode type definitions
 - ✅ Camera store (mode + position state)
 - ✅ `useCamera` hook (mode switching logic)

@@ -1,16 +1,16 @@
-# TICKET-005 — Ship & Island Prototypes
+# TARGET-005 — Ship & Island Prototypes
 
-## Ticket Metadata
+## Target Metadata
 
 | Field        | Value                                              |
 |--------------|----------------------------------------------------|
-| **ID**       | TICKET-005                                         |
+| **ID**       | TARGET-005                                         |
 | **Phase**    | Phase 1 — World Foundation                         |
 | **Priority** | 🟠 High                                            |
 | **Type**     | 3D / Visual                                        |
 | **Estimated Effort** | 3–4 days                                 |
-| **Depends On** | TICKET-001, TICKET-002, TICKET-003 (ocean must exist) |
-| **Blocks**   | TICKET-006 (Navigation routes need ship + islands) |
+| **Depends On** | TARGET-001, TARGET-002, TARGET-003 (ocean must exist) |
+| **Blocks**   | TARGET-006 (Navigation routes need ship + islands) |
 | **Branch**   | `feature/ship-island-prototypes`                   |
 
 ---
@@ -34,7 +34,7 @@ These are prototypes — they establish the data-driven, composable architecture
 - ✅ At least 3 islands visible in world at their defined positions
 - ✅ Each island renders island base + 2-3 palm trees
 - ✅ Islands use instanced geometry for trees
-- ❌ No clickable islands yet (TICKET-006)
+- ❌ No clickable islands yet (TARGET-006)
 - ❌ No unique structures per island type yet (Phase 2)
 - ❌ No detailed terrain models yet
 

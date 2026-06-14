@@ -16,7 +16,8 @@
     "typecheck:backend": "pnpm --dir pirate-ocean-portfolio-backend typecheck",
     "demo:api": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/demo-api.ps1",
     "commands": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/show-commands.ps1",
-    "git-helper": "tsx scripts/git-helper/index.ts"
+    "git-helper": "tsx scripts/git-helper/index.ts",
+    "targets": "tsx scripts/manage-targets.ts"
   },
   "dependencies": {
     "execa": "^8.0.1",

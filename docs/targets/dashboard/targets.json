@@ -1,0 +1,67 @@
+{
+  "phase1": [
+    {
+      "id": "TARGET-001",
+      "name": "Folder Architecture & Project Foundation",
+      "status": "Completed",
+      "priority": "Critical",
+      "branch": "feature/folder-architecture-setup",
+      "lastUpdated": "2026-06-11",
+      "fileName": "TARGET-001-folder-architecture-setup.md"
+    },
+    {
+      "id": "TARGET-002",
+      "name": "Three.js Canvas & Scene Foundation",
+      "status": "Completed",
+      "priority": "Critical",
+      "branch": "feature/threejs-canvas-scene-foundation",
+      "lastUpdated": "2026-06-14",
+      "fileName": "TARGET-002-threejs-canvas-scene-foundation.md"
+    },
+    {
+      "id": "TARGET-003",
+      "name": "Ocean Prototype",
+      "status": "Todo",
+      "priority": "Critical",
+      "branch": "feature/ocean-prototype",
+      "lastUpdated": "2026-06-14",
+      "fileName": "TARGET-003-ocean-prototype.md"
+    },
+    {
+      "id": "TARGET-004",
+      "name": "Camera System",
+      "status": "Todo",
+      "priority": "Critical",
+      "branch": "feature/camera-system",
+      "lastUpdated": "2026-06-14",
+      "fileName": "TARGET-004-camera-system.md"
+    },
+    {
+      "id": "TARGET-005",
+      "name": "Ship & Island Prototypes",
+      "status": "Todo",
+      "priority": "High",
+      "branch": "feature/ship-island-prototypes",
+      "lastUpdated": "2026-06-14",
+      "fileName": "TARGET-005-ship-and-island-prototypes.md"
+    },
+    {
+      "id": "TARGET-006",
+      "name": "Navigation Routes & Island Selection",
+      "status": "Todo",
+      "priority": "High",
+      "branch": "feature/navigation-routes-island-selection.md",
+      "lastUpdated": "2026-06-14",
+      "fileName": "TARGET-006-navigation-routes-island-selection.md"
+    },
+    {
+      "id": "TARGET-007",
+      "name": "UI Overlay Foundation",
+      "status": "Todo",
+      "priority": "High",
+      "branch": "feature/ui-overlay-foundation",
+      "lastUpdated": "2026-06-14",
+      "fileName": "TARGET-007-ui-overlay-foundation.md"
+    }
+  ]
+}

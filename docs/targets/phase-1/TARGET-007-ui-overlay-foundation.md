@@ -1,16 +1,16 @@
-# TICKET-007 — UI Overlay Foundation
+# TARGET-007 — UI Overlay Foundation
 
-## Ticket Metadata
+## Target Metadata
 
 | Field        | Value                                              |
 |--------------|----------------------------------------------------|
-| **ID**       | TICKET-007                                         |
+| **ID**       | TARGET-007                                         |
 | **Phase**    | Phase 1 — World Foundation                         |
 | **Priority** | 🟠 High                                            |
 | **Type**     | Frontend / UI / Layout                             |
 | **Estimated Effort** | 2–3 days                                 |
-| **Depends On** | TICKET-001, TICKET-002, TICKET-006 (navigation events needed for island panel) |
-| **Blocks**   | Nothing — this is the final Phase 1 ticket         |
+| **Depends On** | TARGET-001, TARGET-002, TARGET-006 (navigation events needed for island panel) |
+| **Blocks**   | Nothing — this is the final Phase 1 Target         |
 | **Branch**   | `feature/ui-overlay-foundation`                    |
 
 ---
@@ -19,7 +19,7 @@
 
 Build the HTML/React UI layer that sits on top of the Three.js canvas. This is the framework-only overlay — no portfolio content yet. No "About me", no project details. Just the structural UI shell.
 
-**Version 1 scope (this ticket):**
+**Version 1 scope (this Target):**
 - ✅ Overlay layout system (positioned above canvas)
 - ✅ Branding — logo text using project typeface
 - ✅ Menu button (hamburger/compass icon — opens nothing yet, just renders)
@@ -55,7 +55,7 @@ The overlay must NEVER interfere with Three.js pointer events. Use `pointer-even
 
 ## Design System (CSS Variables)
 
-Establish the complete CSS design token system in this ticket. All future components must use these tokens — never raw hex colors.
+Establish the complete CSS design token system in this Target. All future components must use these tokens — never raw hex colors.
 
 ---
 

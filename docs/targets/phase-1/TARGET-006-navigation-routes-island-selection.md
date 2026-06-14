@@ -1,16 +1,16 @@
-# TICKET-006 — Navigation Routes & Island Selection
+# TARGET-006 — Navigation Routes & Island Selection
 
-## Ticket Metadata
+## Target Metadata
 
 | Field        | Value                                              |
 |--------------|----------------------------------------------------|
-| **ID**       | TICKET-006                                         |
+| **ID**       | TARGET-006                                         |
 | **Phase**    | Phase 1 — World Foundation                         |
 | **Priority** | 🟠 High                                            |
 | **Type**     | 3D / Navigation / System                           |
 | **Estimated Effort** | 2–3 days                                 |
-| **Depends On** | TICKET-001, TICKET-004, TICKET-005             |
-| **Blocks**   | TICKET-007 (UI overlay needs navigation events)    |
+| **Depends On** | TARGET-001, TARGET-004, TARGET-005             |
+| **Blocks**   | TARGET-007 (UI overlay needs navigation events)    |
 | **Branch**   | `feature/navigation-routes-island-selection`       |
 
 ---
@@ -19,7 +19,7 @@
 
 Build the world navigation system — visual route lines between islands, island hover/click interaction (selection), and the state management that connects 3D user interactions to the application layer.
 
-**Version 1 scope (this ticket):**
+**Version 1 scope (this Target):**
 - ✅ Visual navigation route lines rendered between ship hub and each island
 - ✅ Routes highlighted on island hover
 - ✅ Island click emits selection event to navigation store
@@ -27,7 +27,7 @@ Build the world navigation system — visual route lines between islands, island
 - ✅ Selected island highlighted
 - ❌ No ship travel animation yet (Phase 2)
 - ❌ No pathfinding logic yet (Phase 2)
-- ❌ No island content panels yet (TICKET-007 handles UI layer)
+- ❌ No island content panels yet (TARGET-007 handles UI layer)
 
 **Success criteria:** User can hover over islands (they highlight). User can click an island (it becomes selected). Navigation route lines are visible. State updates correctly.
 
@@ -492,7 +492,7 @@ navigation.store updates:
   - selectedIslandId = id
   - route with toId === id → isActive = true
     ↓
-UI Overlay (TICKET-007) reads selectedIslandId → shows island info panel
+UI Overlay (TARGET-007) reads selectedIslandId → shows island info panel
 Camera system reads store → transitions to focus mode
 ```
 
